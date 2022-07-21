@@ -9,7 +9,7 @@ import {
   Grid,
   theme,
 } from '@chakra-ui/react';
-import Login from './pages/Home';
+import Login from './pages/Login';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Actions from './pages/Actions';
 

@@ -27,17 +27,32 @@ function EmailLogin() {
         w='100%'
         maxW='1044px'
         mx='auto'
-        justifyContent='space-between'
+        justifyContent='center'
         mb='30px'
         pt={{ sm: "100px", md: "0px" }}>
+                  <Box
+          display={{ base: "none", md: "block" }}
+          overflowX='hidden'
+          h='100%'
+          w='40vw'
+          position='absolute'
+          left='5px'>
+          <Box
+          bgImage={img}
+            w='100%'
+            h='100%'
+            bgSize='cover'
+            bgPosition='50%'
+            position='absolute'
+            borderBottomLeftRadius='20px'></Box>
+        </Box>
         <Flex
           alignItems='center'
-          justifyContent='start'
+          justifyContent='end'
           style={{ userSelect: "none" }}
-          w={{ base: "100%", md: "50%", lg: "42%" }}>
+          w={{ base: "100%", md: "50%", lg: "90%" }}>
           <Flex
             direction='column'
-            w='100%'
             background='transparent'
             p='48px'
             mt={{ md: "150px", lg: "80px" }}>
@@ -95,22 +110,6 @@ function EmailLogin() {
             </FormControl>
           </Flex>
         </Flex>
-        <Box
-          display={{ base: "none", md: "block" }}
-          overflowX='hidden'
-          h='100%'
-          w='40vw'
-          position='absolute'
-          right='0px'>
-          <Box
-          bgImage={img}
-            w='100%'
-            h='100%'
-            bgSize='cover'
-            bgPosition='50%'
-            position='absolute'
-            borderBottomLeftRadius='20px'></Box>
-        </Box>
       </Flex>
     </Flex>
   );
