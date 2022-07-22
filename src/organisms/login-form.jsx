@@ -16,7 +16,7 @@ import {
 import img from '../img2.png'
 // Assets
 
-function EmailLogin() {
+function LoginForm() {
   // Chakra color mode
   const titleColor = useColorModeValue("#E161A5", "#ced5ed");
   const textColor = useColorModeValue("#ced5ed", "#ced5ed");
@@ -28,29 +28,29 @@ function EmailLogin() {
         maxW='1044px'
         mx='auto'
         justifyContent='center'
-        mb='30px'
+        mb={'30px'}
         pt={{ sm: "100px", md: "0px" }}>
-                  <Box
+        <Box
           display={{ base: "none", md: "block" }}
-          overflowX='hidden'
-          h='100%'
-          w='40vw'
-          position='absolute'
-          left='5px'>
+          overflowX={'hidden'}
+          h={[100, 0, 0, '100%']}
+          w={'40vw'}
+          position={'absolute'}
+          left={20}>
           <Box
           bgImage={img}
-            w='100%'
-            h='100%'
-            bgSize='cover'
-            bgPosition='50%'
-            position='absolute'
-            borderBottomLeftRadius='20px'></Box>
+            w={'100%'}
+            h={'100%'}
+            bgSize={'cover'}
+            bgPosition={'50%'}
+            position={'absolute'}
+            borderBottomLeftRadius={'20px'}></Box>
         </Box>
         <Flex
           alignItems='center'
           justifyContent='end'
           style={{ userSelect: "none" }}
-          w={{ base: "100%", md: "50%", lg: "90%" }}>
+          w={{ base: "100%", md: "50%", lg: "120%" }}>
           <Flex
             direction='column'
             background='transparent'
@@ -72,6 +72,7 @@ function EmailLogin() {
                 E-mail
               </FormLabel>
               <Input
+                id='email-input'
                 borderRadius='15px'
                 mb='24px'
                 fontSize='sm'
@@ -115,4 +116,4 @@ function EmailLogin() {
   );
 }
 
-export default EmailLogin;
+export default LoginForm;
