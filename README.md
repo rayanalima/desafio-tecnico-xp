@@ -11,3 +11,7 @@ Indíce
       * [Local files](#local-files)
    * [Tecnologias](#tecnologias)
 <!--te-->
+
+<h4 align="center"> 
+	🚧  React Select 🚀 Em aprimoramento...  🚧
+</h4>
