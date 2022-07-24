@@ -11,7 +11,7 @@ function InputEmail() {
   const [emailError, setEmailError] = useState(false)
 
   const validateEmail = (e) => {
-    setEmail(e.target.value);
+    let email = (e.target.value);
   
     if (validator.isEmail(email)) {
       setEmailError(false)
