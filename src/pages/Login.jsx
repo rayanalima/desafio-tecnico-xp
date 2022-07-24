@@ -1,7 +1,6 @@
 import React from 'react';
-import LoginForm from '../organisms/login-form';
+import LoginForm from '../organisms/Login/login-form';
 import Footer from '../organisms/Footer';
-import Navbar from '../organisms/Navbar';
 
 function Login() {
   return (

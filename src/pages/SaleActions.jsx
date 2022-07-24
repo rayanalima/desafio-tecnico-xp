@@ -1,16 +1,16 @@
-import BuyAction from '../organisms/BuyActions/BuyActions';
+import SaleActions from '../organisms/SaleActions/SaleActions';
 import Footer from '../organisms/Footer';
 import Navbar from '../organisms/Navbar';
 
-function Buy() {
+function Sale() {
 
   return (
     <>
     <Navbar />
-    <BuyAction />
+    <SaleActions />
     <Footer />
     </>
   );
 }
 
-export default Buy;
+export default Sale;

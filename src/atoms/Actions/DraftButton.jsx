@@ -4,20 +4,19 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-function DepositButton() {
+function DraftButton() {
 
   return (
-              <Link to={'/deposit'}>
+              <Link to={'/draft'}>
               <Button
-              justifyContent={'center'}
                 data-testid='deposit'
                 fontSize='10px'
                 type='submit'
                 bg='#E161A5'
-                w={['80%', '100%']}
+                w={['130%', '100%']}
                 h='45'
-                ml={[2, 15]}
-                mr={[20]}
+                ml={[1, 10]}
+                mr={[5, 20]}
                 mb='20px'
                 color='white'
                 mt='20px'
@@ -28,10 +27,10 @@ function DepositButton() {
                   bg: "#E161A5",
                 }}
                 >
-                Depósito
+                Retirada
               </Button>
 </Link>
   );
 }
 
-export default DepositButton;
+export default DraftButton;

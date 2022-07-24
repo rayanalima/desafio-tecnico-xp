@@ -22,7 +22,6 @@ import {
       <chakra.button
         bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
         rounded={'full'}
-        w={8}
         h={8}
         cursor={'pointer'}
         as={'a'}
@@ -33,7 +32,12 @@ import {
         transition={'background 0.3s ease'}
         _hover={{
           bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-        }}>
+        }}
+        bgColor={'#edf3f8'}
+        bottom={0}
+        margin={0}
+        >
+
         <VisuallyHidden>{label}</VisuallyHidden>
         {children}
       </chakra.button>
@@ -43,11 +47,15 @@ import {
   export default function Footer() {
     return (
       <Box
-        bg={useColorModeValue('gray.50', 'gray.900')}
-        color={useColorModeValue('gray.700', 'gray.200')}>
+        bg={useColorModeValue('white', 'gray.900')}
+        color={useColorModeValue('black', 'gray.200')}
+        bgColor={'#edf3f8'}
+        bottom={0}
+        >
         <Container
           as={Stack}
-          maxW={'6xl'}
+          bg={'#edf3f8'}
+          maxW={'4xl'}
           py={4}
           direction={{ base: 'column', md: 'row' }}
           spacing={4}

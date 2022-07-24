@@ -4,10 +4,10 @@ import {
   Box,
   Flex,
 } from "@chakra-ui/react";
-import img from '../images/img2.png'
-import TextInsertYourAccount from "../atoms/Login/TextInsertYourAccount";
-import HeadingLogin from "../atoms/Login/HeadingLogin";
-import InputsWithButtons from "../molecules/Login/InputsWithButtons";
+import img from '../../images/img2.png'
+import TextInsertYourAccount from "../../atoms/Login/TextInsertYourAccount";
+import HeadingLogin from "../../atoms/Login/HeadingLogin";
+import InputsWithButtons from "../../molecules/Login/InputsWithButtons";
 
 function LoginForm() {
 

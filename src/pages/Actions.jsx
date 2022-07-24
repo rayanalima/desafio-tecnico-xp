@@ -1,4 +1,4 @@
-import UserActions from '../organisms/actions';
+import UserActions from '../organisms/Actions/actions';
 import Footer from '../organisms/Footer';
 import Navbar from '../organisms/Navbar';
 

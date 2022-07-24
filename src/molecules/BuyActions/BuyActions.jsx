@@ -1,44 +1,20 @@
 import React, { useContext, useEffect, useState } from 'react';
 import {
   Flex,
-  Table,
-  Thead,
-  Tr,
-  Tbody,
-  Td,
-  ButtonGroup,
-  IconButton,
-  Th,
   useColorModeValue,
   Heading,
   TableCaption,
   Stack,
   SimpleGrid,
   chakra,
-  Button,
-  Icon,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  InputRightElement,
-  Box
 } from '@chakra-ui/react';
-import { CheckIcon } from '@chakra-ui/icons'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import UserActions from '../../organisms/actions';
 import Context from '../../contexts/MyContext';
-import { BsBoxArrowUpRight, BsFillTrashFill } from 'react-icons/bs';
-import { AiFillEdit } from 'react-icons/ai';
 import api from '../../services/apiMyActions';
-import { AiTwotoneLock } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
-import Navbar from '../../organisms/Navbar';
 
-function BuyActions({email}) {
+function BuyActions() {
   const [idAction, setIdAction] = useContext(Context);
 
   const [user, setUser] = useState([]);
-  const userId = 1;
 
   useEffect(() => {
     api
@@ -56,7 +32,19 @@ function BuyActions({email}) {
   const bg3 = useColorModeValue('gray.100', 'gray.700');
   return (
     <>
-    <Heading bg="#edf3f8" textAlign={'center'}>Comprar ações</Heading>
+            <Heading 
+        bg="#edf3f8"
+        textAlign={'center'}
+        fontFamily='Monospace'
+        fontSize='30px'
+        type='submit'
+        w='100%'
+        h='45'
+        color='black'
+        p={5}
+>
+      Comprar ações
+    </Heading>
       <Flex
         w="full"
         bg="#edf3f8"
@@ -114,13 +102,6 @@ function BuyActions({email}) {
                   <span>Empresa</span>
                   <span>Quantidade</span>
                   <span>Valor</span>
-                  <chakra.span
-                    textAlign={{
-                      md: 'right',
-                    }}
-                  >
-                    Negociar
-                  </chakra.span>
                 </SimpleGrid>
                 <SimpleGrid
                   spacingY={3}
@@ -148,27 +129,6 @@ function BuyActions({email}) {
                   >
                     {token.valor}
                   </chakra.span>
-                  <Flex
-                    justify={{
-                      md: 'end',
-                    }}
-                  >
-                    <ButtonGroup variant="solid" size="sm" spacing={3}>
-                      <Link to={'/buy'}>
-                        <IconButton
-                          colorScheme="blue"
-                          icon={<BsBoxArrowUpRight />}
-                          aria-label="Up"
-                          onClick={() => setIdAction(token.id)}
-                        />
-                      </Link>
-                      <IconButton
-                        colorScheme="green"
-                        icon={<AiFillEdit />}
-                        aria-label="Edit"
-                      />
-                    </ButtonGroup>
-                  </Flex>
                 </SimpleGrid>
               </Flex>
             );

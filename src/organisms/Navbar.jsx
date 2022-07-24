@@ -1,13 +1,7 @@
 import React from 'react';
 import {
-  ChakraProvider,
   Box,
-  Text,
-  Link,
   VStack,
-  Code,
-  Grid,
-  theme,
   chakra,
   Flex,
   HStack,
@@ -15,9 +9,13 @@ import {
   useDisclosure,
   Button,
   IconButton,
-  CloseButton
+  CloseButton,
+  Image
 } from '@chakra-ui/react';
 import {AiOutlineMenu} from 'react-icons/ai'
+import XPLogo from '../images/img2.png'
+import { Link } from "react-router-dom";
+
 
 function Navbar() {
     const bg = useColorModeValue("white", "gray.800");
@@ -36,9 +34,7 @@ function Navbar() {
         >
           <Flex alignItems="center" justifyContent="space-between" mx="auto">
             <Flex>
-              <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
-                Choc
-              </chakra.h1>
+              <Image w={ ['50%', '10%']} src={XPLogo}/>
             </Flex>
             <HStack display="flex" alignItems="center" spacing={1}>
               <HStack
@@ -50,11 +46,18 @@ function Navbar() {
                   md: "inline-flex",
                 }}
               >
-                <Button variant="ghost">Features</Button>
-                <Button variant="ghost">Pricing</Button>
-                <Button variant="ghost">Blog</Button>
-                <Button variant="ghost">Company</Button>
-                <Button variant="ghost">Sign in</Button>
+                <Link to={'/actions/disponible'}>
+                <Button variant="ghost">Ações disponiveis</Button>
+                </Link>
+                <Link to={'/actions/myactions'}>
+                <Button variant="ghost">Minhas ações</Button>
+                </Link>
+                <Link to={'/deposit'}>
+                <Button variant="ghost">Depósito</Button>
+                </Link>
+                <Link to={'/draft'}>
+                <Button variant="ghost">Saque</Button>
+                </Link>
               </HStack>
               <Button colorScheme="brand" size="sm">
                 Get Started
@@ -102,19 +105,16 @@ function Navbar() {
                   />
   
                   <Button w="full" variant="ghost">
-                    Features
+                  Ações disponiveis
                   </Button>
                   <Button w="full" variant="ghost">
-                    Pricing
+                  Minhas ações
                   </Button>
                   <Button w="full" variant="ghost">
-                    Blog
+                  Depósito
                   </Button>
                   <Button w="full" variant="ghost">
-                    Company
-                  </Button>
-                  <Button w="full" variant="ghost">
-                    Sign in
+                  Saque
                   </Button>
                 </VStack>
               </Box>

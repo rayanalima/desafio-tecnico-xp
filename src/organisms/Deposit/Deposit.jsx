@@ -1,13 +1,32 @@
-import { Flex, Box, Text, ButtonGroup, Button, Stack } from '@chakra-ui/react';
+import {
+  Flex,
+  Box,
+  Text,
+  ButtonGroup,
+  Button,
+  Stack,
+  Input,
+  InputGroup,
+  Heading
+} from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
-import api from '../services/api';
+import api from '../../services/api';
 import { FaMoneyBill } from 'react-icons/fa';
 import NumberFormat from 'react-number-format';
-import DepositButton from '../atoms/Actions/DepositButton';
+import { MdAttachMoney } from 'react-icons/md';
+
+import DepositButton from '../../atoms/Actions/DepositButton';
+import BuyButtons from '../../atoms/BuyActions/BuyButtons';
 
 function NewDeposit() {
   const [user, setUser] = useState([]);
+  const [value, setValue] = useState(0);
+
   const userId = 1;
+
+  const handleChange = event => {
+    setValue(event.target.value);
+  };
 
   useEffect(() => {
     api
@@ -21,6 +40,19 @@ function NewDeposit() {
   }, []);
   return (
     <>
+                      <Heading 
+        bg="#edf3f8"
+        textAlign={'center'}
+        fontFamily='Monospace'
+        fontSize='30px'
+        type='submit'
+        w='100%'
+        h='45'
+        color='black'
+        p={5}
+>
+      Deposito
+    </Heading>
       <Flex
         bg="#edf3f8"
         _dark={{
@@ -60,12 +92,20 @@ function NewDeposit() {
           />
         </Box>
       </Flex>
-      <Stack bg="#edf3f8"spacing={4}>
-      <ButtonGroup p={50} alignSelf={'center'}>
-        <Button>Voltar</Button>
-        <Button>Confirmar</Button>
-      </ButtonGroup>
-      </Stack>
+      <Flex bg="#edf3f8" justify={'center'}>
+        <Stack bg="#edf3f8" spacing={4}>
+          <InputGroup p={[0, 50]} w={['170', '2xl']} alignSelf={'center'}>
+            <MdAttachMoney size={40} />
+            <Input
+              type={'number'}
+              onChange={handleChange}
+              placeholder="Informe um valor"
+              />
+          </InputGroup>
+          <Flex bg="#edf3f8" justify={'center'}></Flex>
+        </Stack>
+      </Flex>
+      <BuyButtons />
     </>
   );
 }

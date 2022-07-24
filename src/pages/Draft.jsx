@@ -1,15 +1,15 @@
-import NewDeposit from '../organisms/Deposit/Deposit';
 import Navbar from '../organisms/Navbar';
 import Footer from '../organisms/Footer';
+import NewDraft from '../organisms/Draft/Draft';
 
-function Deposit() {
+function Draft() {
   return (
     <>
     <Navbar />
-    <NewDeposit />
+    <NewDraft />
     <Footer />
     </>
   );
 }
 
-export default Deposit;
+export default Draft;
