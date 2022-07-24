@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {
   ChakraProvider,
   Box,
@@ -11,8 +11,11 @@ import {
 } from '@chakra-ui/react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import UserActions from '../organisms/actions';
+import MyContext from '../contexts/MyContext'
 
-function Actions() {
+function Actions({email}) {
+
+  console.log(email)
   return (
     <UserActions />
   );
