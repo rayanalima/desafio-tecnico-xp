@@ -21,8 +21,6 @@ function InputEmail() {
     }
   }
 
-  console.log(emailError)
-
   return (
     <>
       <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
