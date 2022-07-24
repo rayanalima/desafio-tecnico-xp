@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import {
   FormLabel,
   Input,
@@ -8,19 +8,16 @@ import validator from 'validator';
 
 function InputEmail() {
 
-  const [emailError, setEmailError] = useState(false)
-
+  const [emailError, setEmailError] = useState('')
   const validateEmail = (e) => {
-    setEmail(e.target.value);
+    let email = e.target.value
   
     if (validator.isEmail(email)) {
       setEmailError(false)
-    }
-    else {
+    } else {
       setEmailError('Digite um e-mail válido')
     }
   }
-
   return (
     <>
       <FormLabel ms="4px" fontSize="sm" fontWeight="normal">

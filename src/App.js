@@ -15,6 +15,7 @@ import Draft from './pages/Draft';
 import MyAction from './pages/MyActions';
 
 function App() {
+  const [idAction, setIdAction] = useState(0);
 
   const [idAction, setIdAction] = useState(0);
 
@@ -39,5 +40,3 @@ function App() {
 }
 
 
-
-export default App;
