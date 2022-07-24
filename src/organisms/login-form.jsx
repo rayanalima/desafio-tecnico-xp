@@ -3,20 +3,13 @@ import React from "react";
 import {
   Box,
   Flex,
-  Button,
-  FormControl,
-  FormLabel,
-  Heading,
-  Input,
-  Text,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import img from '../img2.png'
-import { Link } from "react-router-dom";
+import TextInsertYourAccount from "../atoms/Login/TextInsertYourAccount";
+import HeadingLogin from "../atoms/Login/HeadingLogin";
+import InputsWithButtons from "../molecules/Login/InputsWithButtons";
 
 function LoginForm() {
-  const titleColor = useColorModeValue("#E161A5", "#ced5ed");
-  const textColor = useColorModeValue("#ced5ed", "#ced5ed");
 
   return (
     <Flex position='relative' mb='40px'>
@@ -54,63 +47,9 @@ function LoginForm() {
             background='transparent'
             p='48px'
             mt={{ md: "150px", lg: "80px" }}>
-            <Heading color={titleColor} fontSize='32px' mb='10px'>
-              Bem vindo!
-            </Heading>
-            <Text
-              mb='36px'
-              ms='4px'
-              color={textColor}
-              fontWeight='bold'
-              fontSize='14px'>
-              Insira seu e-mail e sua senha para acessar sua conta
-            </Text>
-            <FormControl>
-              <FormLabel ms='4px' fontSize='sm' fontWeight='normal'>
-                E-mail
-              </FormLabel>
-              <Input
-                id='email-input'
-                borderRadius='15px'
-                mb='24px'
-                fontSize='sm'
-                type='text'
-                placeholder='Seu e-mail'
-                size='lg'
-              />
-              <FormLabel ms='4px' fontSize='sm' fontWeight='normal'>
-                Senha
-              </FormLabel>
-              <Input
-                borderRadius='15px'
-                mb='36px'
-                fontSize='sm'
-                type='password'
-                placeholder='Sua senha'
-                size='lg'
-              />
-              <Link to={'/actions'}>
-              <Button
-                data-testid='xp-logo'
-                fontSize='10px'
-                type='submit'
-                bg='#E161A5'
-                w='100%'
-                h='45'
-                mb='20px'
-                color='white'
-                mt='20px'
-                _hover={{
-                  bg: "#E161A5",
-                }}
-                _active={{
-                  bg: "#E161A5",
-                }}
-                >
-                ACESSAR SUA CONTA
-              </Button>
-              </Link>
-            </FormControl>
+            <HeadingLogin />
+            <TextInsertYourAccount />
+            <InputsWithButtons />
           </Flex>
         </Flex>
       </Flex>
