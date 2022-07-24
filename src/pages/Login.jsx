@@ -10,11 +10,11 @@ import {
   theme,
 } from '@chakra-ui/react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import EmailLogin from '../organisms/login-form';
+import LoginForm from '../organisms/login-form';
 
 function Login() {
   return (
-    <EmailLogin />
+    <LoginForm />
   );
 }
 
