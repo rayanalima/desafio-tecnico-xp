@@ -1,20 +1,15 @@
 import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import LoginForm from '../organisms/login-form';
+import Footer from '../organisms/Footer';
+import Navbar from '../organisms/Navbar';
 
 function Login() {
   return (
+    <>
+    <Navbar />
     <LoginForm />
+    <Footer />
+    </>
   );
 }
 

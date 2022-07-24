@@ -1,19 +1,16 @@
-import React from "react";
-// Chakra imports
-import {
-  Box,
-  Flex,
-} from "@chakra-ui/react";
-import img from '../img2.png'
-import TextInsertYourAccount from "../atoms/Login/TextInsertYourAccount";
-import HeadingLogin from "../atoms/Login/HeadingLogin";
-import InputsWithButtons from "../molecules/Login/InputsWithButtons";
+import React from 'react';
+import BuyActions from '../molecules/BuyActions/BuyActions';
+import Navbar from '../organisms/Navbar';
+import ButtonsBuy from '../molecules/BuyActions/ButtonsBuy';
 
-function BuyActions({email}) {
-    console.log(email)
+function BuyAction() {
+
   return (
-    <p>aaaaaaaa</p>
+    <>
+    <BuyActions />
+    <ButtonsBuy />
+    </>
   );
 }
 
-export default BuyActions;
+export default BuyAction;

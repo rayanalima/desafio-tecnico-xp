@@ -4,19 +4,22 @@
         "id": 1,
         "nome": "Caio Valverde",
         "email": "caio@hotmail.com",
-        "senha": 123456
+        "senha": 123456,
+        "saldo": 255
       },
       {
         "id": 2,
         "nome": "Amanda Carvalho",
         "email": "amanda@gmail.com",
-        "senha": 123456
+        "senha": 123456,
+        "saldo": 255
       },
       {
         "id": 3,
         "nome": "Thiago Silva",
         "email": "thiago@icloud.com",
-        "senha": 123456
+        "senha": 123456,
+        "saldo": 255
       }
     ],
     "acoesusuario": [

@@ -8,6 +8,7 @@ import Context  from './contexts/MyContext'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Actions from './pages/Actions';
 import Buy from './pages/BuyActions';
+import Deposit from './pages/Deposit';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Login />}/>
         <Route path="/actions" element={<Actions />}/>
         <Route path="/buy" element={<Buy />}/>
+        <Route path="/deposit" element={<Deposit />}/>
       </Routes>
     </BrowserRouter>
     </ChakraProvider>
