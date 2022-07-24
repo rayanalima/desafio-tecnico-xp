@@ -18,14 +18,21 @@ import {
   Button,
   Icon
 } from '@chakra-ui/react';
+import Context from '../../contexts/MyContext'
 import { BsBoxArrowUpRight, BsFillTrashFill } from 'react-icons/bs';
 import { AiFillEdit } from 'react-icons/ai';
+import { FcSalesPerformance } from 'react-icons/fc'
+import {MdAddShoppingCart} from 'react-icons/md'
 import api from '../../services/apiMyActions';
-import {AiTwotoneLock} from 'react-icons/ai'
 import { Link } from 'react-router-dom';
+import DepositButton from '../../atoms/Actions/DepositButton';
+import DraftButton from '../../atoms/Actions/DraftButton';
+import DepositDraftButton from '../DepositDraftButton';
 
 
 function ActionsFree() {
+  const [idAction, setIdAction] = useContext(Context);
+
   const [user, setUser] = useState([]);
   const userId = 1;
 
@@ -42,11 +49,21 @@ function ActionsFree() {
 
   const bg = useColorModeValue("white", "gray.800");
   const bg2 = useColorModeValue("white", "gray.800");
-  const bg3 = useColorModeValue("gray.100", "gray.700");
+  const bg3 = useColorModeValue("#edf3f8", "gray.700");
   return (
     <>
-    <Heading>
-      Disponiveis para investir
+        <Heading 
+        bg="#edf3f8"
+        textAlign={'center'}
+        fontFamily='Monospace'
+        fontSize='30px'
+        type='submit'
+        w='100%'
+        h='45'
+        color='black'
+        p={5}
+>
+      Ações disponiveis
     </Heading>
     <Flex
       w="full"
@@ -99,7 +116,7 @@ function ActionsFree() {
                   base: 2,
                   md: 10,
                 }}
-                fontSize="md"
+                fontSize="x-small"
                 fontWeight="hairline"
               >
                 <span>Empresa</span>
@@ -122,13 +139,16 @@ function ActionsFree() {
                 w="full"
                 py={2}
                 px={10}
-                fontSize={'small'}
+                fontSize="small"
+                mt={2}
+                fontWeight="hairline"
               >
                 <span>{token.empresa}</span>
                 <chakra.span
                   textOverflow="ellipsis"
                   overflow="hidden"
                   whiteSpace="nowrap"
+                  
                 >
                   {token.quantidade}
                 </chakra.span>
@@ -136,6 +156,7 @@ function ActionsFree() {
                   textOverflow="ellipsis"
                   overflow="hidden"
                   whiteSpace="nowrap"
+                  
                 >
                   {token.valor}
                 </chakra.span>
@@ -144,21 +165,15 @@ function ActionsFree() {
                     md: "end",
                   }}
                 >
-                  <ButtonGroup variant="solid" size="sm" spacing={3}>
-                    <Link to={'/buy'}>
+                  <Link to={'/buy'}>
                     <IconButton
                       colorScheme="blue"
-                      icon={<BsBoxArrowUpRight />}
+                      icon={<MdAddShoppingCart />}
                       aria-label="Up"
+                      onClick={() => setIdAction(token.id)}
+
                     />
                     </Link>
-                    <IconButton
-                      colorScheme="green"
-                      icon={<AiFillEdit />}
-                      aria-label="Edit"
-                      isDisabled
-                    />
-                  </ButtonGroup>
                 </Flex>
               </SimpleGrid>
             </Flex>

@@ -1,29 +1,24 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {
   Flex,
-  ButtonGroup,
-  IconButton,
   useColorModeValue,
   Heading,
+  TableCaption,
   Stack,
   SimpleGrid,
-  chakra
+  chakra,
 } from '@chakra-ui/react';
 import Context from '../../contexts/MyContext';
-import { FcSalesPerformance } from 'react-icons/fc';
-import { MdAddShoppingCart } from 'react-icons/md';
 import api from '../../services/apiMyActions';
-import { Link } from 'react-router-dom';
 
-function MyActions() {
+function SaleAction() {
   const [idAction, setIdAction] = useContext(Context);
 
   const [user, setUser] = useState([]);
-  const userId = 1;
 
   useEffect(() => {
     api
-      .get(`?usuario_id=${userId}`)
+      .get(`?id=${idAction}`)
       .then(response => {
         setUser(response.data);
       })
@@ -34,22 +29,22 @@ function MyActions() {
 
   const bg = useColorModeValue('white', 'gray.800');
   const bg2 = useColorModeValue('white', 'gray.800');
-  const bg3 = useColorModeValue('#edf3f8', 'gray.700');
+  const bg3 = useColorModeValue('gray.100', 'gray.700');
   return (
     <>
-      <Heading
+    <Heading 
         bg="#edf3f8"
         textAlign={'center'}
-        fontFamily="Monospace"
-        fontSize="30px"
-        type="submit"
-        w="100%"
-        h="45"
-        color="black"
+        fontFamily='Monospace'
+        fontSize='30px'
+        type='submit'
+        w='100%'
+        h='45'
+        color='black'
         p={5}
-      >
-        Minhas ações
-      </Heading>
+>
+      Vender ações
+    </Heading>
       <Flex
         w="full"
         bg="#edf3f8"
@@ -101,19 +96,12 @@ function MyActions() {
                     base: 2,
                     md: 10,
                   }}
-                  fontSize="x-small"
+                  fontSize="md"
                   fontWeight="hairline"
                 >
                   <span>Empresa</span>
                   <span>Quantidade</span>
                   <span>Valor</span>
-                  <chakra.span
-                    textAlign={{
-                      md: 'right',
-                    }}
-                  >
-                    Negociar
-                  </chakra.span>
                 </SimpleGrid>
                 <SimpleGrid
                   spacingY={3}
@@ -124,8 +112,6 @@ function MyActions() {
                   w="full"
                   py={2}
                   px={10}
-                  fontSize="small"
-                  mt={2}
                   fontWeight="hairline"
                 >
                   <span>{token.empresa}</span>
@@ -143,38 +129,14 @@ function MyActions() {
                   >
                     {token.valor}
                   </chakra.span>
-                  <Flex
-                    justify={{
-                      md: 'end',
-                    }}
-                  >
-                    <ButtonGroup variant="solid" size="sm" spacing={3}>
-                      <Link to={'/buy'}>
-                        <IconButton
-                          colorScheme="blue"
-                          icon={<MdAddShoppingCart />}
-                          aria-label="Up"
-                          onClick={() => setIdAction(token.id)}
-                        />
-                      </Link>
-                      <Link to={'/sale'}>
-                      <IconButton
-                        colorScheme="green"
-                        icon={<FcSalesPerformance />}
-                        aria-label="Edit"
-                        onClick={() => setIdAction(token.id)}
-                      />
-                      </Link>
-                    </ButtonGroup>
-                  </Flex>
                 </SimpleGrid>
               </Flex>
             );
           })}
         </Stack>
       </Flex>
-    </>
+      </>
   );
 }
 
-export default MyActions;
+export default SaleAction;
