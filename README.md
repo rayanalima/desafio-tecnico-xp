@@ -13,5 +13,5 @@ Indíce
 <!--te-->
 
 <h4 align="center"> 
-	🚧  React Select 🚀 Em aprimoramento...  🚧
+	🚧 Desafio Técnico XP 🚀 Em aprimoramento...  🚧
 </h4>
