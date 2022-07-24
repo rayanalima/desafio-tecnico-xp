@@ -6,9 +6,12 @@ import {
     Text,
     useColorModeValue,
     VisuallyHidden,
+    Image,
+    Flex
   } from '@chakra-ui/react';
   import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
-  import { ReactNode } from 'react';
+  import reactLogo from '../images/reactLogo.gif'
+  import heartLogo from '../images/heartLogo.gif'
   
   const SocialButton = ({
     children,
@@ -50,7 +53,12 @@ import {
           spacing={4}
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
-          <Text>© 2022 Chakra Templates. All rights reserved</Text>
+            <Flex mt={2}>
+          <Text textAlign={'center'}>Build with </Text>
+          <Image ml={2} mr={2} w={5} src={reactLogo} />
+          <Text textAlign={'center'}>and</Text>
+          <Image ml={2} w={5} src={heartLogo} />
+          </Flex>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />

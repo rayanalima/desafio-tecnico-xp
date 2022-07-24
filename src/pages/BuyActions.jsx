@@ -1,4 +1,3 @@
-import React from 'react';
 import BuyAction from '../organisms/BuyActions';
 import Footer from '../organisms/Footer';
 import Navbar from '../organisms/Navbar';

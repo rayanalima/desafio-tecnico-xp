@@ -6,7 +6,6 @@ import Navbar from '../organisms/Navbar';
 function Login() {
   return (
     <>
-    <Navbar />
     <LoginForm />
     <Footer />
     </>
