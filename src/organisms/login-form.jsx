@@ -8,18 +8,16 @@ import {
   FormLabel,
   Heading,
   Input,
-  Switch,
   Text,
-  Link,
   useColorModeValue,
 } from "@chakra-ui/react";
 import img from '../img2.png'
-// Assets
+import { Link } from "react-router-dom";
 
 function LoginForm() {
-  // Chakra color mode
   const titleColor = useColorModeValue("#E161A5", "#ced5ed");
   const textColor = useColorModeValue("#ced5ed", "#ced5ed");
+
   return (
     <Flex position='relative' mb='40px'>
       <Flex
@@ -91,7 +89,9 @@ function LoginForm() {
                 placeholder='Sua senha'
                 size='lg'
               />
+              <Link to={'/actions'}>
               <Button
+                data-testid='xp-logo'
                 fontSize='10px'
                 type='submit'
                 bg='#E161A5'
@@ -105,9 +105,11 @@ function LoginForm() {
                 }}
                 _active={{
                   bg: "#E161A5",
-                }}>
+                }}
+                >
                 ACESSAR SUA CONTA
               </Button>
+              </Link>
             </FormControl>
           </Flex>
         </Flex>
