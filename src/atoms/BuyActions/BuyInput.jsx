@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import {
   Stack,
+  Button,
+  Input,
   InputGroup,
   Flex
 } from '@chakra-ui/react';
@@ -8,7 +10,7 @@ import NumberFormat from 'react-number-format';
 import { MdAttachMoney } from 'react-icons/md';
 
 function BuyInput() {
-  const [valueInput] = useState(0);
+  const [valueInput, setValueInput] = useState(0);
 
   return (
     <Flex bg="#edf3f8" justify={'center'}>

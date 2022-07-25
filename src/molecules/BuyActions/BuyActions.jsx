@@ -3,6 +3,7 @@ import {
   Flex,
   useColorModeValue,
   Heading,
+  TableCaption,
   Stack,
   SimpleGrid,
   chakra,
@@ -11,7 +12,7 @@ import Context from '../../contexts/MyContext';
 import api from '../../services/apiMyActions';
 
 function BuyActions() {
-  const [idAction] = useContext(Context);
+  const [idAction, setIdAction] = useContext(Context);
 
   const [user, setUser] = useState([]);
 

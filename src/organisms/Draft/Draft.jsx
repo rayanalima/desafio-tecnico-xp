@@ -16,7 +16,7 @@ import BuyButtons from '../../atoms/BuyActions/BuyButtons';
     
   function NewDraft() {
     const [user, setUser] = useState([]);
-    const [ setValue] = useState(0);
+    const [value, setValue] = useState(0);
   
     const userId = 1;
   

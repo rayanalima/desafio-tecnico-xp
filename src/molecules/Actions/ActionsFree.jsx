@@ -13,10 +13,8 @@ import {MdAddShoppingCart} from 'react-icons/md'
 import api from '../../services/apiMyActions';
 import { Link } from 'react-router-dom';
 
-
-
 function ActionsFree() {
-  const [ setIdAction] = useContext(Context);
+  const [idAction, setIdAction] = useContext(Context);
 
   const [user, setUser] = useState([]);
   const userId = 1;

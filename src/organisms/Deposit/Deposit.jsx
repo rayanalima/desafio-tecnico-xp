@@ -2,6 +2,8 @@ import {
   Flex,
   Box,
   Text,
+  ButtonGroup,
+  Button,
   Stack,
   Input,
   InputGroup,
@@ -12,11 +14,13 @@ import api from '../../services/api';
 import { FaMoneyBill } from 'react-icons/fa';
 import NumberFormat from 'react-number-format';
 import { MdAttachMoney } from 'react-icons/md';
+
+import DepositButton from '../../atoms/Actions/DepositButton';
 import BuyButtons from '../../atoms/BuyActions/BuyButtons';
 
 function NewDeposit() {
   const [user, setUser] = useState([]);
-  const [ setValue] = useState(0);
+  const [value, setValue] = useState(0);
 
   const userId = 1;
 
