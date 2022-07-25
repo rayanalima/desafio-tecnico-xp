@@ -51,4 +51,21 @@ $ npm start
 # O API iniciará na porta 3000
 
 ```
+<h2 align="center">🛠 Tecnologias </h1>
+
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+-   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
+-   **[React Icons](https://react-icons.github.io/react-icons/)**
+-   **[Axios](https://github.com/axios/axios)**
+-   **[Chakra UI](https://chakra-ui.com/)**
+-   **[NumberFormat](https://www.npmjs.com/package/react-number-format)**
+
+
+-   Protótipo:  **[Figma](https://www.figma.com/)**
+-   Ícones:  **[React Icons]([https://react-icons.com/](https://react-icons.github.io/react-icons/))**, **[Chakra UI Icons]([[https://react-icons.com/](https://react-icons.github.io/react-icons/)](https://chakra-ui.com/docs/components/icon))**, 
+
+
+---
 
