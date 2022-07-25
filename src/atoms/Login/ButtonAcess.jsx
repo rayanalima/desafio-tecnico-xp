@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Context from "../../contexts/MyContext";
 
 function ButtonAcess() {
-  const [isValid, setIsValid] = useContext(Context);
+  const [isValid ] = useContext(Context);
 
   return (
               <Link to={'/actions'}>

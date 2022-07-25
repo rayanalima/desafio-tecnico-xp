@@ -1,11 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
-  ButtonGroup,
   Stack,
   Button,
-  Input,
   InputGroup,
-  InputLeftElement,
   Flex
 } from '@chakra-ui/react';
 import NumberFormat from 'react-number-format';
@@ -13,11 +10,7 @@ import { MdAttachMoney } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 function ButtonsSale() {
-  const [valueInput, setValueInput] = useState(0);
-
-  const handleClick = event => {
-    setValueInput(event.target.value);
-  };
+  const [valueInput] = useState(0);
 
   console.log(valueInput)
   return (

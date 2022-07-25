@@ -10,7 +10,7 @@ import Context from '../../contexts/MyContext';
 function InputPassword() {
 
   const [passwordError, setPasswordError] = useState()
-  const [isValid, setIsValid] = useContext(Context);
+  const [ setIsValid] = useContext(Context);
 
 
   const validatePassword = (e) => {

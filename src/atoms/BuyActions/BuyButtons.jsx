@@ -1,21 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Stack,
   Button,
-  Input,
-  InputGroup,
   Flex
 } from '@chakra-ui/react';
-import NumberFormat from 'react-number-format';
-import { MdAttachMoney } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 function BuyButtons() {
-  const [value, setValue] = useState(0);
 
-  const handleChange = event => {
-    setValue(event.target.value);
-  };
   return (
     <Flex bg="#edf3f8" justify={'center'}>
     <Stack bg="#edf3f8" spacing={4}>

@@ -11,7 +11,6 @@ import {
   IconButton,
   CloseButton,
   Image,
-  Text
 } from '@chakra-ui/react';
 import {AiOutlineMenu} from 'react-icons/ai'
 import XPLogo from '../images/img2.png'
@@ -21,7 +20,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
 
-  const [user, setUser] = useState([]);
+  const [ setUser] = useState([]);
 
   const bg = useColorModeValue("white", "gray.800");
   const mobileNav = useDisclosure();
