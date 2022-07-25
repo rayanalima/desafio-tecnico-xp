@@ -32,7 +32,7 @@ function BuyActions() {
   const bg3 = useColorModeValue('gray.100', 'gray.700');
   return (
     <>
-            <Heading 
+        <Heading 
         bg="#edf3f8"
         textAlign={'center'}
         fontFamily='Monospace'

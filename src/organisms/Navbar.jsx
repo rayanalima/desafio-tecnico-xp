@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Box,
   VStack,
@@ -10,16 +10,35 @@ import {
   Button,
   IconButton,
   CloseButton,
-  Image
+  Image,
+  Text
 } from '@chakra-ui/react';
 import {AiOutlineMenu} from 'react-icons/ai'
 import XPLogo from '../images/img2.png'
+import api from '../services/api';
 import { Link } from "react-router-dom";
 
 
 function Navbar() {
-    const bg = useColorModeValue("white", "gray.800");
-    const mobileNav = useDisclosure();
+
+  const [user, setUser] = useState([]);
+
+  const bg = useColorModeValue("white", "gray.800");
+  const mobileNav = useDisclosure();
+
+  const userId = 1;
+
+  useEffect(() => {
+    api
+      .get(`?usuario_id=${userId}`)
+      .then(response => {
+        setUser(response.data);
+      })
+      .catch(err => {
+        console.error('ops! ocorreu um erro : ' + err);
+      });
+  }, []);
+
     return (
       <React.Fragment>
         <chakra.header

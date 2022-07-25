@@ -10,32 +10,39 @@ import {
 } from '@chakra-ui/react';
 import NumberFormat from 'react-number-format';
 import { MdAttachMoney } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 function ButtonsSale() {
-  const [value, setValue] = useState(0);
+  const [valueInput, setValueInput] = useState(0);
 
-  const handleChange = event => {
-    setValue(event.target.value);
+  const handleClick = event => {
+    setValueInput(event.target.value);
   };
+
+  console.log(valueInput)
   return (
     <Flex bg="#edf3f8" justify={'center'}>
     <Stack bg="#edf3f8" spacing={4}>
-      <InputGroup p={[0, 50]} w={['170', '2xl']} alignSelf={'center'}>
+      <InputGroup p={[0, 50]} w={['170', '2xl']} justifyContent={'center'} bgColor={'#edf3f8'} alignSelf={'center'}>
         <MdAttachMoney size={40} />
-        <Input
-          type={'number'}
-          onChange={handleChange}
-          placeholder="Informe um valor"
+        <NumberFormat
+        value={valueInput}
+        displayType={'input'}
+        thousandSeparator={'.'}
+        decimalSeparator={','}
+        fixedDecimalScale={true}
+        decimalScale={2}
+        prefix={'R$ '}
         />
       </InputGroup>
       <Flex bg="#edf3f8" justify={'center'} >
-
+      <Link to={'/actions'}>
       <Button
                 data-testid='deposit'
                 fontSize='10px'
                 type='submit'
                 bg='#E161A5'
-                w='20%'
+                w={'50%'}
                 h='45'
                 ml={28}
                 mb='20px'
@@ -50,12 +57,13 @@ function ButtonsSale() {
                 >
                 Voltar
               </Button>
+              </Link>
               <Button
                 data-testid='deposit'
                 fontSize='10px'
                 type='submit'
                 bg='#E161A5'
-                w='20%'
+                w={['52%' ,'15%']}
                 h='45'
                 ml={10}
                 mr={20}

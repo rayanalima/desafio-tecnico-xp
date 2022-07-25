@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {
   FormLabel,
   Input,
@@ -10,12 +10,15 @@ import Context from '../../contexts/MyContext';
 function InputPassword() {
 
   const [passwordError, setPasswordError] = useState()
+  const [isValid, setIsValid] = useContext(Context);
+
 
   const validatePassword = (e) => {
     var password = e.target.value
   
     if (validator.isStrongPassword(password)) {
       setPasswordError(false)
+      setIsValid(0)
     } else {
       setPasswordError('Senha errada ou não é forte o bastante')
     }

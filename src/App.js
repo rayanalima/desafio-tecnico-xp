@@ -15,10 +15,10 @@ import Draft from './pages/Draft';
 import MyAction from './pages/MyActions';
 
 function App() {
-  const [idAction, setIdAction] = useState(0);
+  const [idAction, setIdAction, isValid, setIsValid ] = useState(1);
 
   return (
-    <Context.Provider value={[idAction, setIdAction]}>
+    <Context.Provider value={[idAction, setIdAction, isValid, setIsValid ]}>
     <ChakraProvider theme={theme}>
     <BrowserRouter>
       <Routes>
@@ -37,4 +37,4 @@ function App() {
   );
 }
 
-
+export default App;

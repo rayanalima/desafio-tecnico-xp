@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 import {
   Button,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import Context from "../../contexts/MyContext";
 
 function ButtonAcess() {
+  const [isValid, setIsValid] = useContext(Context);
 
   return (
               <Link to={'/actions'}>
@@ -24,6 +26,7 @@ function ButtonAcess() {
                 _active={{
                   bg: "#E161A5",
                 }}
+                disabled={isValid}
                 >
                 ACESSAR SUA CONTA
               </Button>
