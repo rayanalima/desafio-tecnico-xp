@@ -1,68 +1,71 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Desafio Técnico XP 🚀</h1>
 
-## Available Scripts
+<h4 align="center"> 
+	🚧 Desafio Técnico XP 🚀 Em aprimoramento...  🚧
+</h4>
 
-In the project directory, you can run:
+### Features
 
-### `npm start`
+- [x] Tela de Login
+- [x] Tela de depósito
+- [x] Tela de saque
+- [x] Tela com todas as ações disponiveis
+- [x] Tela de compra
+- [x] Tela de venda
+- [ ] Salvar localmente o último usuário logado
+- [ ] Validação de e-mail e senha
+- [ ] Testes Unitários
+- [ ] Tratamento de Erros
+- [ ] Deploy da aplicação
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h2 align="center">Sobre o desafio 🚀</h1>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+O projeto consistia em criar telas para simular o dia a dia de um funcionário da XP, eu escolhi desenvolver em ReactJS usando a biblioteca de estilo Chakra UI, pois eu tinha vontade de aprender a utilizar ela, o APP foi pensado totalmente em MobileFirst, e essa foi a oportunidade perfeita pois ela lida com os tamanhos de tela de uma forma bem dinâmica, utilizei o modelo do Atomic Design para organização de páginas e componentes, criei uma mini API no meu json para retornar os dados dos usuários logados, utilizei a biblioteca Axios para consumir a API, usei o Context para gerenciar os estados globais da aplicação, e a biblioteca NumberFormat para deixar os inputs que recebem números para formatação.
 
-### `npm test`
+<h2 align="center">Como executar o projeto 🚀</h1>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Pré-requisitos
 
-### `npm run build`
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 🎲 Rodando a API e o Front-End
+```bash
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# Clone este repositório
+$ git clone git@github.com:rayanalima/desafio-tecnico-xp.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Acesse a pasta do projeto
+$ cd desafio-tecnico-xp
 
-### `npm run eject`
+# Instale as dependências
+$ npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Para rodar a API execute o comando
+$ json-server --watch db.json
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Para rodar a aplicação execute o comando
+$ npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# O API iniciará na porta 3000
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+<h2 align="center">🛠 Tecnologias </h1>
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+As seguintes ferramentas foram usadas na construção do projeto:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
+-   **[React Icons](https://react-icons.github.io/react-icons/)**
+-   **[Axios](https://github.com/axios/axios)**
+-   **[Chakra UI](https://chakra-ui.com/)**
+-   **[NumberFormat](https://www.npmjs.com/package/react-number-format)**
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+-   Protótipo:  **[Figma](https://www.figma.com/)**
+-   Ícones:  **[React Icons]([https://react-icons.com/](https://react-icons.github.io/react-icons/))**, **[Chakra UI Icons]([[https://react-icons.com/](https://react-icons.github.io/react-icons/)](https://chakra-ui.com/docs/components/icon))**, 
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+---
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
