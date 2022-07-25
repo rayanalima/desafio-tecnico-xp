@@ -1,33 +1,18 @@
 import React, { useState, useEffect, useContext } from 'react';
 import {
   Flex,
-  Table,
-  Thead,
-  Tr,
-  Tbody,
-  Td,
-  ButtonGroup,
   IconButton,
-  Th,
   useColorModeValue,
   Heading,
-  TableCaption,
   Stack,
   SimpleGrid,
-  chakra,
-  Button,
-  Icon
+  chakra
 } from '@chakra-ui/react';
 import Context from '../../contexts/MyContext'
-import { BsBoxArrowUpRight, BsFillTrashFill } from 'react-icons/bs';
-import { AiFillEdit } from 'react-icons/ai';
-import { FcSalesPerformance } from 'react-icons/fc'
 import {MdAddShoppingCart} from 'react-icons/md'
 import api from '../../services/apiMyActions';
 import { Link } from 'react-router-dom';
-import DepositButton from '../../atoms/Actions/DepositButton';
-import DraftButton from '../../atoms/Actions/DraftButton';
-import DepositDraftButton from '../DepositDraftButton';
+
 
 
 function ActionsFree() {

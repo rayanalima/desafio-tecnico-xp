@@ -9,6 +9,8 @@ import validator from 'validator';
 function InputEmail() {
 
   const [emailError, setEmailError] = useState('')
+
+
   const validateEmail = (e) => {
     let email = e.target.value
   
@@ -18,6 +20,7 @@ function InputEmail() {
       setEmailError('Digite um e-mail válido')
     }
   }
+
   return (
     <>
       <FormLabel ms="4px" fontSize="sm" fontWeight="normal">

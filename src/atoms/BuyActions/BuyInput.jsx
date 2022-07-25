@@ -10,20 +10,21 @@ import NumberFormat from 'react-number-format';
 import { MdAttachMoney } from 'react-icons/md';
 
 function BuyInput() {
-  const [value, setValue] = useState(0);
+  const [valueInput, setValueInput] = useState(0);
 
-  const handleChange = event => {
-    setValue(event.target.value);
-  };
   return (
     <Flex bg="#edf3f8" justify={'center'}>
     <Stack bg="#edf3f8" spacing={4}>
-      <InputGroup p={[0, 50]} w={['170', '2xl']} alignSelf={'center'}>
+    <InputGroup p={[0, 50]} w={['170', '2xl']} justifyContent={'center'} bgColor={'#edf3f8'} alignSelf={'center'}>
         <MdAttachMoney size={40} />
-        <Input
-          type={'number'}
-          onChange={handleChange}
-          placeholder="Informe um valor"
+        <NumberFormat
+        value={valueInput}
+        displayType={'input'}
+        thousandSeparator={'.'}
+        decimalSeparator={','}
+        fixedDecimalScale={true}
+        decimalScale={2}
+        prefix={'R$ '}
         />
       </InputGroup>
     </Stack>
