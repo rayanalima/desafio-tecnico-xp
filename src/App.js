@@ -17,8 +17,6 @@ import MyAction from './pages/MyActions';
 function App() {
   const [idAction, setIdAction, isValid, setIsValid ] = useState(1);
 
-  const [idAction, setIdAction] = useState(0);
-
   return (
     <Context.Provider value={[idAction, setIdAction, isValid, setIsValid ]}>
     <ChakraProvider theme={theme}>
