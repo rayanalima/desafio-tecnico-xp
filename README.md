@@ -1,15 +1,5 @@
 <h1 align="center">Desafio Técnico XP 🚀</h1>
 
-Indíce
-=================
-<!--ts-->
-   * [Sobre o desafio](#sobre-o-desafio)
-   * [Como executar o projeto](#-como-executar-o-projeto)
-      * [Pre Requisitos](#pre-requisitos)
-      * [Local files](#local-files)
-   * [Tecnologias](#tecnologias)
-<!--te-->
-
 <h4 align="center"> 
 	🚧 Desafio Técnico XP 🚀 Em aprimoramento...  🚧
 </h4>
@@ -28,11 +18,11 @@ Indíce
 - [ ] Tratamento de Erros
 - [ ] Deploy da aplicação
 
-## 💻 Sobre o desafio
+<h2 align="center">Sobre o desafio 🚀</h1>
 
 O projeto consistia em criar telas para simular o dia a dia de um funcionário da XP, eu escolhi desenvolver em ReactJS usando a biblioteca de estilo Chakra UI, pois eu tinha vontade de aprender a utilizar ela, o APP foi pensado totalmente em MobileFirst, e essa foi a oportunidade perfeita pois ela lida com os tamanhos de tela de uma forma bem dinâmica, utilizei o modelo do Atomic Design para organização de páginas e componentes, criei uma mini API no meu json para retornar os dados dos usuários logados, utilizei a biblioteca Axios para consumir a API, usei o Context para gerenciar os estados globais da aplicação, e a biblioteca NumberFormat para deixar os inputs que recebem números para formatação.
 
-## 🚀 Como executar o projeto
+<h2 align="center">Como executar o projeto 🚀</h1>
 
 ### Pré-requisitos
 
