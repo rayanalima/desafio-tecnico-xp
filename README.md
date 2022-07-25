@@ -3,7 +3,7 @@
 Indíce
 =================
 <!--ts-->
-   * [Sobre o desafio](#Sobre)
+   * [Sobre o desafio](#sobre-o-desafio)
    * [Como executar o projeto](#-como-executar-o-projeto)
       * [Pre Requisitos](#pre-requisitos)
       * [Local files](#local-files)
